@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Extracargas — Transporte de carga general desde Buenos Aires a todo el país. Semirremolques y siders con seguimiento en tiempo real."/>
+  <title>Extracargas — Transporte de Carga General</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/isologo.svg"/>
+  <link rel="icon" type="image/png" href="img/isologo.png"/>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="nav-barra">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="#inicio" class="nav-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas"/>
+      </a>
+
+      <!-- Links desktop -->
+      <ul class="nav-enlaces">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#cobertura">Cobertura</a></li>
+        <li><a href="#sectores">Sectores</a></li>
+        <li><a href="#contacto" class="nav-cta">Cotizar</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa (mobile) -->
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <!-- Menú mobile desplegable -->
+    <div class="nav-menu-mobile" id="menuMobile">
+      <a href="#nosotros"  onclick="cerrarMenu()">Nosotros</a>
+      <a href="#servicios" onclick="cerrarMenu()">Servicios</a>
+      <a href="#cobertura" onclick="cerrarMenu()">Cobertura</a>
+      <a href="#sectores"  onclick="cerrarMenu()">Sectores</a>
+      <a href="#contacto"  onclick="cerrarMenu()">Cotizar</a>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="inicio" class="hero">
+    <div class="hero-inner">
+
+      <!-- Logo blanco para fondo azul -->
+      <div class="hero-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas" style="filter: brightness(0) invert(1);"/>
+      </div>
+
+      <span class="hero-tag">Transporte de Carga General · Argentina</span>
+
+      <h1 class="hero-titulo">
+        Conectamos<br>
+        Buenos Aires<br>
+        con todo<br>
+        el <span class="acento">país</span>
+      </h1>
+
+      <p class="hero-subtitulo">
+        Más de 15 años trasladando carga general en semirremolques y siders. Cubrimos todas las provincias con salidas regulares y seguimiento en tiempo real.
+      </p>
+
+      <div class="hero-botones">
+        <a href="#contacto" class="btn-rojo">Solicitar cotización</a>
+        <a href="#cobertura" class="btn-ghost-blanco">Ver cobertura</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="stat-numero">15<span>+</span></div>
+          <div class="stat-etiqueta">Años en el mercado</div>
+        </div>
+        <div>
+          <div class="stat-numero">23</div>
+          <div class="stat-etiqueta">Provincias cubiertas</div>
+        </div>
+        <div>
+          <div class="stat-numero">NOA</div>
+          <div class="stat-etiqueta">Zona de alta frecuencia</div>
+        </div>
+        <div>
+          <div class="stat-numero">24<span>hs</span></div>
+          <div class="stat-etiqueta">Seguimiento en ruta</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divisor"></div>
+
+
+  <!-- ══════════════════════════════════════
+       NOSOTROS
+  ══════════════════════════════════════ -->
+  <section id="nosotros" class="seccion">
+    <div class="seccion-inner">
+
+      <div class="seccion-label fade-up">Quiénes somos</div>
+      <h2 class="seccion-titulo fade-up">Más de una década<br>en movimiento</h2>
+
+      <div class="nosotros-grilla">
+        <div class="nosotros-texto fade-up">
+          <p>
+            <strong>Extracargas</strong> es una empresa de transporte de carga general con base en el Gran Buenos Aires y más de 15 años de trayectoria en logística nacional.
+          </p>
+          <p>
+            Operamos con semirremolques y siders hacia todo el país, con salidas regulares y rutas planificadas que nos permiten garantizar tiempos de entrega concretos en cada destino.
+          </p>
+          <p>
+            Acompañamos a nuestros clientes con seguimiento en tiempo real, gestión documental completa y atención personalizada en cada operación.
+          </p>
+        </div>
+
+        <div class="nosotros-valores fade-up">
+          <div class="valor-item">
+            <div class="valor-numero">01</div>
+            <div class="valor-cuerpo">
+              <h4>Confiabilidad</h4>
+              <p>Cumplimos los plazos acordados con toda la documentación en regla.</p>
+            </div>
+          </div>
+          <div class="valor-item">
+            <div class="valor-numero">02</div>
+            <div class="valor-cuerpo">
+              <h4>Seguridad</h4>
+              <p>Seguimiento satelital permanente y equipos bajo estrictos estándares operativos.</p>
+            </div>
+          </div>
+          <div class="valor-item">
+            <div class="valor-numero">03</div>
+            <div class="valor-cuerpo">
+              <h4>Compromiso</h4>
+              <p>Atención personalizada y respuesta rápida ante cualquier imprevisto en ruta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       SERVICIOS
+  ══════════════════════════════════════ -->
+  <section id="servicios" class="seccion seccion-fondo-gris">
+    <div class="seccion-inner">
+
+      <div class="seccion-label fade-up">Lo que hacemos</div>
+      <h2 class="seccion-titulo fade-up">Nuestros servicios</h2>
+
+      <div class="servicios-grilla">
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">🚛</span>
+          <h3>Semirremolques</h3>
+          <p>Alta capacidad para despachos completos de carga general a cualquier destino del país.</p>
+        </div>
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">📦</span>
+          <h3>Siders</h3>
+          <p>Lonas laterales corredizas para carga y descarga ágil de mercadería paletizada.</p>
+        </div>
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">🗺️</span>
+          <h3>Distribución nacional</h3>
+          <p>Rutas planificadas hacia todas las provincias con frecuencias regulares de salida.</p>
+        </div>
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">📡</span>
+          <h3>Seguimiento GPS</h3>
+          <p>Monitoreo en tiempo real disponible para el cliente durante todo el trayecto.</p>
+        </div>
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">📋</span>
+          <h3>Gestión documental</h3>
+          <p>Remitos, cartas de porte, seguros y toda la documentación reglamentaria completa.</p>
+        </div>
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">🤝</span>
+          <h3>Atención personalizada</h3>
+          <p>Un ejecutivo de cuenta para cada cliente, disponible ante cualquier imprevisto.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       COBERTURA
+  ══════════════════════════════════════ -->
+  <section id="cobertura" class="seccion">
+    <div class="seccion-inner">
+
+      <div class="seccion-label fade-up">Dónde llegamos</div>
+      <h2 class="seccion-titulo fade-up">Cobertura nacional</h2>
+
+      <div class="cobertura-grilla">
+
+        <div class="cobertura-info fade-up">
+          <p>
+            Operamos desde el <strong>Gran Buenos Aires</strong> con salidas programadas hacia todo el territorio argentino. Cubrimos rutas troncales y destinos secundarios con el mismo nivel de trazabilidad y compromiso.
+          </p>
+          <div class="cobertura-noa-badge">
+            <span>★ Alta frecuencia: Salta · Jujuy · Tucumán · Stgo. del Estero</span>
+          </div>
+          <p>
+            Las provincias del NOA cuentan con salidas semanales y tiempos de entrega acordados, lo que nos permite integrarnos de manera confiable a la cadena de abastecimiento de nuestros clientes del norte.
+          </p>
+          <a href="#contacto" class="btn-ghost-azul">Consultar su destino</a>
+        </div>
+
+        <div class="provincia-lista fade-up">
+          <!-- Alta frecuencia: NOA -->
+          <div class="provincia-subtitulo">Alta frecuencia</div>
+          <span class="provincia-tag noa">Salta ★</span>
+          <span class="provincia-tag noa">Jujuy ★</span>
+          <span class="provincia-tag noa">Tucumán ★</span>
+          <span class="provincia-tag noa">Stgo. del Estero ★</span>
+          <!-- Resto del país -->
+          <div class="provincia-subtitulo">Resto del país</div>
+          <span class="provincia-tag">Buenos Aires</span>
+          <span class="provincia-tag">Córdoba</span>
+          <span class="provincia-tag">Santa Fe</span>
+          <span class="provincia-tag">Mendoza</span>
+          <span class="provincia-tag">Entre Ríos</span>
+          <span class="provincia-tag">Misiones</span>
+          <span class="provincia-tag">Chaco</span>
+          <span class="provincia-tag">Corrientes</span>
+          <span class="provincia-tag">San Juan</span>
+          <span class="provincia-tag">Río Negro</span>
+          <span class="provincia-tag">Neuquén</span>
+          <span class="provincia-tag">Formosa</span>
+          <span class="provincia-tag">Chubut</span>
+          <span class="provincia-tag">San Luis</span>
+          <span class="provincia-tag">La Rioja</span>
+          <span class="provincia-tag">Catamarca</span>
+          <span class="provincia-tag">La Pampa</span>
+          <span class="provincia-tag">Santa Cruz</span>
+          <span class="provincia-tag">Tierra del Fuego</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       SECTORES
+  ══════════════════════════════════════ -->
+  <section id="sectores" class="seccion seccion-fondo-gris">
+    <div class="seccion-inner">
+
+      <div class="seccion-label fade-up">A quiénes servimos</div>
+      <h2 class="seccion-titulo fade-up">Sectores que atendemos</h2>
+
+      <div class="sectores-grilla fade-up">
+        <div class="tarjeta-sector">
+          <span class="sector-icono">🏭</span>
+          <span>Industria alimenticia</span>
+        </div>
+        <div class="tarjeta-sector">
+          <span class="sector-icono">🛒</span>
+          <span>Consumo masivo</span>
+        </div>
+        <div class="tarjeta-sector">
+          <span class="sector-icono">🍺</span>
+          <span>Bebidas</span>
+        </div>
+        <div class="tarjeta-sector">
+          <span class="sector-icono">📦</span>
+          <span>Retail mayorista</span>
+        </div>
+        <div class="tarjeta-sector">
+          <span class="sector-icono">⚡</span>
+          <span>Energía / Oil & Gas</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       CONTACTO
+  ══════════════════════════════════════ -->
+  <section id="contacto" class="seccion">
+    <div class="seccion-inner">
+
+      <div class="seccion-label fade-up">Hablemos</div>
+      <h2 class="seccion-titulo fade-up">Contacto</h2>
+
+      <div class="contacto-grilla">
+
+        <div class="contacto-info fade-up">
+          <p>¿Necesita transportar su carga? Cuéntenos origen, destino y tipo de mercadería y le enviamos una cotización sin cargo en menos de 24 horas.</p>
+
+          <div class="dato-contacto">
+            <span class="dato-icono">📍</span>
+            <div>
+              <div class="dato-etiqueta">Dirección</div>
+              <div class="dato-valor">Buenos Aires, Argentina</div>
+            </div>
+          </div>
+          <div class="dato-contacto">
+            <span class="dato-icono">📞</span>
+            <div>
+              <div class="dato-etiqueta">Teléfono / WhatsApp</div>
+              <a href="tel:+5491100000000" class="dato-valor">+54 9 11 5403-6746</a>
+            </div>
+          </div>
+          <div class="dato-contacto">
+            <span class="dato-icono">✉️</span>
+            <div>
+              <div class="dato-etiqueta">Correo electrónico</div>
+              <a href="mailto:extracargas@gmail.com.ar" class="dato-valor">extracargas@gmail.com.ar</a>
+            </div>
+          </div>
+          <div class="dato-contacto">
+            <span class="dato-icono">🕐</span>
+            <div>
+              <div class="dato-etiqueta">Horario de atención</div>
+              <div class="dato-valor">Lunes a viernes · 8:00 a 18:00 hs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacto-formulario fade-up">
+          <div class="form-fila">
+            <div class="form-grupo form-grupo-completo">
+              <label class="form-etiqueta" for="campo-nombre">Nombre y empresa</label>
+              <input class="form-input" type="text" id="campo-nombre" placeholder="Ej: Juan García — Empresa S.A."/>
+            </div>
+          </div>
+          <div class="form-fila">
+            <div class="form-grupo">
+              <label class="form-etiqueta" for="campo-email">Correo electrónico</label>
+              <input class="form-input" type="email" id="campo-email" placeholder="correo@empresa.com"/>
+            </div>
+            <div class="form-grupo">
+              <label class="form-etiqueta" for="campo-telefono">Teléfono</label>
+              <input class="form-input" type="tel" id="campo-telefono" placeholder="+54 9 ..."/>
+            </div>
+          </div>
+          <div class="form-fila">
+            <div class="form-grupo">
+              <label class="form-etiqueta" for="campo-origen">Origen</label>
+              <input class="form-input" type="text" id="campo-origen" placeholder="Ej: Avellaneda, Bs.As."/>
+            </div>
+            <div class="form-grupo">
+              <label class="form-etiqueta" for="campo-destino">Destino</label>
+              <input class="form-input" type="text" id="campo-destino" placeholder="Ej: Salta capital"/>
+            </div>
+          </div>
+          <div class="form-fila">
+            <div class="form-grupo form-grupo-completo">
+              <label class="form-etiqueta" for="campo-equipo">Tipo de equipo</label>
+              <select class="form-select" id="campo-equipo">
+                <option value="" disabled selected>Seleccionar…</option>
+                <option>Semirremolque</option>
+                <option>Sider</option>
+                <option>No lo sé todavía</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-fila">
+            <div class="form-grupo form-grupo-completo">
+              <label class="form-etiqueta" for="campo-detalle">Detalle de la carga</label>
+              <textarea class="form-textarea" id="campo-detalle" placeholder="Tipo de mercadería, peso estimado, fecha de retiro…"></textarea>
+            </div>
+          </div>
+          <div class="form-enviar" id="form-enviar">
+            <button class="btn-rojo" onclick="enviarFormulario()">Solicitar cotización →</button>
+          </div>
+          <div class="form-exito" id="form-exito">
+            ✅ ¡Gracias! Recibimos su consulta. Un ejecutivo le responderá en menos de 24 horas.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <a href="#inicio" class="footer-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas" style="filter: brightness(0) invert(1); opacity: .8;"/>
+      </a>
+
+      <ul class="footer-enlaces">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#cobertura">Cobertura</a></li>
+        <li><a href="#sectores">Sectores</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <p class="footer-copy">© 2025 Extracargas · Gran Buenos Aires, Argentina</p>
+
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
