@@ -859,3 +859,37 @@ footer {
   .btn-ghost-blanco,
   .btn-ghost-azul { text-align: center; }
 }
+
+/* ============================================================
+   HERO — layout dos columnas con animación
+   ============================================================ */
+.hero-inner {
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-contenido {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-animacion {
+  flex: 1 1 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.92;
+}
+
+/* En mobile: una sola columna, animación oculta */
+@media (max-width: 900px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+  .hero-animacion {
+    display: none;
+  }
+}
