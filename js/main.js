@@ -122,3 +122,40 @@ if (pista) {
   /* Avance automático cada 4 segundos */
   setInterval(() => irA(actual + 1), 4000);
 }
+
+/* ── Carrusel de sectores ── */
+const pistaSectores        = document.getElementById('carruselPistaSectores');
+const btnPrevSectores      = document.getElementById('carruselSectoresPrev');
+const btnNextSectores      = document.getElementById('carruselSectoresNext');
+const contenedorPuntosSectores = document.getElementById('carruselPuntosSectores');
+
+if (pistaSectores) {
+  const slidesSectores = pistaSectores.querySelectorAll('.carrusel-slide');
+  let actualSectores = 0;
+
+  slidesSectores.forEach((_, i) => {
+    const punto = document.createElement('button');
+    punto.classList.add('carrusel-punto');
+    punto.setAttribute('aria-label', `Ir a imagen ${i + 1}`);
+    if (i === 0) punto.classList.add('activo');
+    punto.addEventListener('click', () => irASectores(i));
+    contenedorPuntosSectores.appendChild(punto);
+  });
+
+  function actualizarPuntosSectores() {
+    contenedorPuntosSectores.querySelectorAll('.carrusel-punto').forEach((p, i) => {
+      p.classList.toggle('activo', i === actualSectores);
+    });
+  }
+
+  function irASectores(index) {
+    actualSectores = (index + slidesSectores.length) % slidesSectores.length;
+    pistaSectores.style.transform = `translateX(-${actualSectores * 100}%)`;
+    actualizarPuntosSectores();
+  }
+
+  btnPrevSectores.addEventListener('click', () => irASectores(actualSectores - 1));
+  btnNextSectores.addEventListener('click', () => irASectores(actualSectores + 1));
+
+  setInterval(() => irASectores(actualSectores + 1), 4000);
+}
