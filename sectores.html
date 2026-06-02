@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Extracargas — Sectores que atendemos. Industria alimenticia, consumo masivo, bebidas, retail mayorista y energía."/>
+  <title>Sectores — Extracargas</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/isologo.svg"/>
+  <link rel="icon" type="image/png" href="img/isologo.png"/>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="nav-barra">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas"/>
+      </a>
+
+      <!-- Links desktop (ocultos por CSS) -->
+      <ul class="nav-enlaces">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cobertura.html">Cobertura</a></li>
+        <li><a href="sectores.html" class="activo">Sectores</a></li>
+        <li><a href="contacto.html" class="nav-cta">Cotizar</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa + desplegable desktop -->
+      <div class="nav-derecha">
+        <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu-desktop" id="menuDesktop">
+          <a href="nosotros.html">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="cobertura.html">Cobertura</a>
+          <a href="sectores.html">Sectores</a>
+          <a href="contacto.html" class="nav-cta">Cotizar</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Menú mobile desplegable -->
+    <div class="nav-menu-mobile" id="menuMobile">
+      <a href="nosotros.html"  onclick="cerrarMenu()">Nosotros</a>
+      <a href="servicios.html" onclick="cerrarMenu()">Servicios</a>
+      <a href="cobertura.html" onclick="cerrarMenu()">Cobertura</a>
+      <a href="sectores.html"  onclick="cerrarMenu()">Sectores</a>
+      <a href="contacto.html"  onclick="cerrarMenu()">Cotizar</a>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════
+       SECTORES
+  ══════════════════════════════════════ -->
+  <section id="sectores" class="seccion seccion-fondo-gris">
+    <div class="seccion-inner">
+
+      <div class="seccion-label fade-up">A quiénes servimos</div>
+      <h2 class="seccion-titulo fade-up">Sectores que atendemos</h2>
+
+      <div class="sectores-grilla fade-up">
+        <div class="tarjeta-sector">
+          <span class="sector-icono">🏭</span>
+          <span>Industria alimenticia</span>
+        </div>
+        <div class="tarjeta-sector">
+          <span class="sector-icono">🛒</span>
+          <span>Consumo masivo</span>
+        </div>
+        <div class="tarjeta-sector">
+          <span class="sector-icono">🍺</span>
+          <span>Bebidas</span>
+        </div>
+        <div class="tarjeta-sector">
+          <span class="sector-icono">📦</span>
+          <span>Retail mayorista</span>
+        </div>
+        <div class="tarjeta-sector">
+          <span class="sector-icono">⚡</span>
+          <span>Energía / Oil & Gas</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <a href="index.html" class="footer-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas" style="filter: brightness(0) invert(1); opacity: .8;"/>
+      </a>
+
+      <ul class="footer-enlaces">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cobertura.html">Cobertura</a></li>
+        <li><a href="sectores.html">Sectores</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <p class="footer-copy">© 2026 Extracargas SRL · Gran Buenos Aires, Argentina</p>
+
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

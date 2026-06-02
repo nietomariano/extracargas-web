@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Extracargas — Contacto. Solicitá una cotización de transporte de carga general a cualquier provincia del país."/>
+  <title>Contacto — Extracargas</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/isologo.svg"/>
+  <link rel="icon" type="image/png" href="img/isologo.png"/>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="nav-barra">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas"/>
+      </a>
+
+      <!-- Links desktop (ocultos por CSS) -->
+      <ul class="nav-enlaces">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cobertura.html">Cobertura</a></li>
+        <li><a href="sectores.html">Sectores</a></li>
+        <li><a href="contacto.html" class="nav-cta">Cotizar</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa + desplegable desktop -->
+      <div class="nav-derecha">
+        <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu-desktop" id="menuDesktop">
+          <a href="nosotros.html">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="cobertura.html">Cobertura</a>
+          <a href="sectores.html">Sectores</a>
+          <a href="contacto.html" class="nav-cta">Cotizar</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Menú mobile desplegable -->
+    <div class="nav-menu-mobile" id="menuMobile">
+      <a href="nosotros.html"  onclick="cerrarMenu()">Nosotros</a>
+      <a href="servicios.html" onclick="cerrarMenu()">Servicios</a>
+      <a href="cobertura.html" onclick="cerrarMenu()">Cobertura</a>
+      <a href="sectores.html"  onclick="cerrarMenu()">Sectores</a>
+      <a href="contacto.html"  onclick="cerrarMenu()">Cotizar</a>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════
+       CONTACTO
+  ══════════════════════════════════════ -->
+  <section id="contacto" class="seccion">
+    <div class="seccion-inner">
+
+      <div class="seccion-label fade-up">Hablemos</div>
+      <h2 class="seccion-titulo fade-up">Contacto</h2>
+
+      <div class="contacto-grilla">
+
+        <div class="contacto-info fade-up">
+          <p>¿Necesita transportar su carga? Cuéntenos origen, destino y tipo de mercadería y le enviamos una cotización sin cargo en menos de 24 horas.</p>
+
+          <div class="dato-contacto">
+            <span class="dato-icono">📍</span>
+            <div>
+              <div class="dato-etiqueta">Dirección</div>
+              <div class="dato-valor">Gran Buenos Aires, Argentina</div>
+            </div>
+          </div>
+          <div class="dato-contacto">
+            <span class="dato-icono">📞</span>
+            <div>
+              <div class="dato-etiqueta">Teléfono / WhatsApp</div>
+              <a href="tel:+5491154036746" class="dato-valor">+54 9 11 5403-6746</a>
+            </div>
+          </div>
+          <div class="dato-contacto">
+            <span class="dato-icono">✉️</span>
+            <div>
+              <div class="dato-etiqueta">Correo electrónico</div>
+              <a href="mailto:extracargas@gmail.com" class="dato-valor">extracargas@gmail.com</a>
+            </div>
+          </div>
+          <div class="dato-contacto">
+            <span class="dato-icono">🕐</span>
+            <div>
+              <div class="dato-etiqueta">Horario de atención</div>
+              <div class="dato-valor">Lunes a viernes · 8:00 a 18:00 hs</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacto-formulario fade-up">
+
+          <form
+            action="https://formspree.io/f/xzdykkwz"
+            method="POST"
+            id="form-contacto"
+          >
+            <input type="hidden" name="_subject" value="Nueva consulta desde extracargas.com.ar"/>
+            <input type="hidden" name="_next" value="https://extracargas.com.ar/contacto.html"/>
+
+            <div class="form-fila">
+              <div class="form-grupo form-grupo-completo">
+                <label class="form-etiqueta" for="campo-nombre">Nombre y empresa</label>
+                <input class="form-input" type="text" id="campo-nombre" name="nombre_empresa" placeholder="Ej: Juan García — Empresa S.A." required/>
+              </div>
+            </div>
+            <div class="form-fila">
+              <div class="form-grupo">
+                <label class="form-etiqueta" for="campo-email">Correo electrónico</label>
+                <input class="form-input" type="email" id="campo-email" name="email" placeholder="correo@empresa.com" required/>
+              </div>
+              <div class="form-grupo">
+                <label class="form-etiqueta" for="campo-telefono">Teléfono</label>
+                <input class="form-input" type="tel" id="campo-telefono" name="telefono" placeholder="+54 9 ..."/>
+              </div>
+            </div>
+            <div class="form-fila">
+              <div class="form-grupo">
+                <label class="form-etiqueta" for="campo-origen">Origen</label>
+                <input class="form-input" type="text" id="campo-origen" name="origen" placeholder="Ej: Avellaneda, Bs.As."/>
+              </div>
+              <div class="form-grupo">
+                <label class="form-etiqueta" for="campo-destino">Destino</label>
+                <input class="form-input" type="text" id="campo-destino" name="destino" placeholder="Ej: Salta capital"/>
+              </div>
+            </div>
+            <div class="form-fila">
+              <div class="form-grupo form-grupo-completo">
+                <label class="form-etiqueta" for="campo-equipo">Tipo de equipo</label>
+                <select class="form-select" id="campo-equipo" name="tipo_equipo">
+                  <option value="" disabled selected>Seleccionar…</option>
+                  <option>Semirremolque</option>
+                  <option>Sider</option>
+                  <option>No lo sé todavía</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-fila">
+              <div class="form-grupo form-grupo-completo">
+                <label class="form-etiqueta" for="campo-detalle">Detalle de la carga</label>
+                <textarea class="form-textarea" id="campo-detalle" name="detalle_carga" placeholder="Tipo de mercadería, peso estimado, fecha de retiro…" required></textarea>
+              </div>
+            </div>
+
+            <div class="form-enviar" id="form-enviar">
+              <button type="submit" class="btn-rojo">Solicitar cotización →</button>
+            </div>
+            <div class="form-exito" id="form-exito">
+              ✅ ¡Gracias! Recibimos su consulta. Un ejecutivo le responderá en menos de 24 horas.
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <a href="index.html" class="footer-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas" style="filter: brightness(0) invert(1); opacity: .8;"/>
+      </a>
+
+      <ul class="footer-enlaces">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cobertura.html">Cobertura</a></li>
+        <li><a href="sectores.html">Sectores</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <p class="footer-copy">© 2026 Extracargas SRL · Gran Buenos Aires, Argentina</p>
+
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

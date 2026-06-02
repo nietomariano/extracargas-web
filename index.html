@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Extracargas — Transporte de carga general desde Buenos Aires a todo el país. Semirremolques y siders con seguimiento en tiempo real."/>
+  <title>Extracargas — Transporte de Carga General</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/isologo.svg"/>
+  <link rel="icon" type="image/png" href="img/isologo.png"/>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="nav-barra">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas"/>
+      </a>
+
+      <!-- Links desktop (se ocultan con el nuevo CSS) -->
+      <ul class="nav-enlaces">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cobertura.html">Cobertura</a></li>
+        <li><a href="sectores.html">Sectores</a></li>
+        <li><a href="contacto.html" class="nav-cta">Cotizar</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa (mobile y desktop) -->
+      <div class="nav-derecha">
+        <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <!-- Menú desplegable desktop -->
+        <div class="nav-menu-desktop" id="menuDesktop">
+          <a href="nosotros.html">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="cobertura.html">Cobertura</a>
+          <a href="sectores.html">Sectores</a>
+          <a href="contacto.html" class="nav-cta">Cotizar</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Menú mobile desplegable -->
+    <div class="nav-menu-mobile" id="menuMobile">
+      <a href="nosotros.html"  onclick="cerrarMenu()">Nosotros</a>
+      <a href="servicios.html" onclick="cerrarMenu()">Servicios</a>
+      <a href="cobertura.html" onclick="cerrarMenu()">Cobertura</a>
+      <a href="sectores.html"  onclick="cerrarMenu()">Sectores</a>
+      <a href="contacto.html"  onclick="cerrarMenu()">Cotizar</a>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section id="inicio" class="hero">
+    <div class="hero-inner">
+
+      <!-- Columna izquierda: texto -->
+      <div class="hero-contenido">
+
+        <span class="hero-tag">Transporte de Carga General · Argentina</span>
+
+        <h1 class="hero-titulo">
+          Conectamos<br>
+          Buenos Aires<br>
+          con todo<br>
+          el <span class="acento">país</span>
+        </h1>
+
+        <p class="hero-subtitulo">
+          Más de 15 años trasladando carga general en semirremolques y siders. Cubrimos todas las provincias con salidas regulares y seguimiento en tiempo real.
+        </p>
+
+        <div class="hero-botones">
+          <a href="contacto.html" class="btn-rojo">Solicitar cotización</a>
+          <a href="cobertura.html" class="btn-ghost-blanco">Ver cobertura</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <div class="stat-numero">15<span>+</span></div>
+            <div class="stat-etiqueta">Años en el mercado</div>
+          </div>
+          <div>
+            <div class="stat-numero">23</div>
+            <div class="stat-etiqueta">Provincias cubiertas</div>
+          </div>
+          <div>
+            <div class="stat-numero">NOA</div>
+            <div class="stat-etiqueta">Zona de alta frecuencia</div>
+          </div>
+          <div>
+            <div class="stat-numero">24<span>hs</span></div>
+            <div class="stat-etiqueta">Seguimiento en ruta</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Columna derecha: animación de rutas -->
+      <div class="hero-animacion" aria-hidden="true">
+        <svg width="100%" viewBox="0 0 580 420" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <style>
+              .ruta{fill:none;stroke:rgba(255,255,255,0.15);stroke-width:1;stroke-dasharray:600;stroke-dashoffset:600}
+              .ruta-noa{stroke:rgba(232,73,49,0.35)}
+              .nodo-anillo{fill:none;stroke:rgba(255,255,255,0.25);stroke-width:1}
+              .nodo-centro{fill:rgba(255,255,255,0.15)}
+              .nodo-etiqueta{font-family:"Barlow Condensed","Barlow",sans-serif;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;fill:rgba(255,255,255,0.45);text-anchor:middle}
+              .nodo-etiqueta-noa{fill:rgba(232,73,49,0.8)}
+              .pulso{fill:none;stroke-width:1;opacity:0}
+              .r1{animation:dibujar 1.8s 0.2s ease forwards}
+              .r2{animation:dibujar 1.8s 0.5s ease forwards}
+              .r3{animation:dibujar 1.8s 0.8s ease forwards}
+              .r4{animation:dibujar 1.8s 1.0s ease forwards}
+              .r5{animation:dibujar 1.8s 1.2s ease forwards}
+              .r6{animation:dibujar 1.8s 1.4s ease forwards}
+              .r7{animation:dibujar 1.8s 0.3s ease forwards}
+              .r8{animation:dibujar 1.8s 0.6s ease forwards}
+              @keyframes dibujar{to{stroke-dashoffset:0}}
+              .nodo-g{opacity:0}
+              .ng1{animation:aparecer 0.4s 1.8s ease forwards}
+              .ng2{animation:aparecer 0.4s 2.1s ease forwards}
+              .ng3{animation:aparecer 0.4s 2.0s ease forwards}
+              .ng4{animation:aparecer 0.4s 2.3s ease forwards}
+              .ng5{animation:aparecer 0.4s 2.2s ease forwards}
+              .ng6{animation:aparecer 0.4s 2.4s ease forwards}
+              .ng7{animation:aparecer 0.4s 2.5s ease forwards}
+              .ng-bga{animation:aparecer 0.6s 0.1s ease forwards}
+              @keyframes aparecer{from{opacity:0;transform:scale(0.5)}to{opacity:1;transform:scale(1)}}
+              .p1{animation:pulsar 2.5s 3.0s ease-out infinite;stroke:rgba(255,255,255,0.3)}
+              .p2{animation:pulsar 2.5s 3.3s ease-out infinite;stroke:rgba(255,255,255,0.3)}
+              .p3{animation:pulsar 2.5s 3.6s ease-out infinite;stroke:rgba(232,73,49,0.5)}
+              .p4{animation:pulsar 2.5s 3.9s ease-out infinite;stroke:rgba(232,73,49,0.5)}
+              .p5{animation:pulsar 2.5s 4.2s ease-out infinite;stroke:rgba(232,73,49,0.5)}
+              .p6{animation:pulsar 2.5s 3.1s ease-out infinite;stroke:rgba(255,255,255,0.3)}
+              .p7{animation:pulsar 2.5s 3.8s ease-out infinite;stroke:rgba(255,255,255,0.3)}
+              .p-bga{animation:pulsar 3s 0.5s ease-out infinite;stroke:rgba(232,73,49,0.6)}
+              @keyframes pulsar{0%{r:5;opacity:0.8}100%{r:18;opacity:0}}
+              .bga-dot{animation:bga-pulso 2s 1s ease-out infinite}
+              @keyframes bga-pulso{0%,100%{r:6;opacity:1}50%{r:8;opacity:0.8}}
+              .leyenda-g{opacity:0;animation:aparecer 0.5s 3.5s ease forwards}
+            </style>
+            <path id="ruta-noa-salta" d="M 210 290 C 220 260 230 220 265 195 C 280 170 300 140 310 115 C 330 95 360 80 390 70"/>
+            <path id="ruta-cba" d="M 210 290 C 220 260 230 220 265 195"/>
+            <path id="ruta-mza" d="M 210 290 C 190 270 160 240 130 200"/>
+          </defs>
+
+          <path class="ruta r1" d="M 210 290 C 220 260 230 220 265 195"/>
+          <path class="ruta r2" d="M 210 290 C 190 270 160 240 130 200"/>
+          <path class="ruta r7" d="M 210 290 C 215 270 220 250 225 235"/>
+          <path class="ruta r8" d="M 210 290 C 230 300 270 320 310 340"/>
+          <path class="ruta ruta-noa r3" d="M 265 195 C 280 170 300 140 310 115"/>
+          <path class="ruta ruta-noa r4" d="M 265 195 C 300 180 340 170 370 155"/>
+          <path class="ruta ruta-noa r5" d="M 310 115 C 330 95 360 80 390 70"/>
+          <path class="ruta ruta-noa r6" d="M 310 115 C 315 95 320 75 330 58"/>
+
+          <g class="nodo-g ng-bga" style="transform-origin:210px 290px">
+            <circle class="pulso p-bga" cx="210" cy="290" r="5"/>
+            <circle class="nodo-anillo" cx="210" cy="290" r="12"/>
+            <circle class="bga-dot" cx="210" cy="290" r="6" fill="#e84931" opacity="0.9"/>
+            <text class="nodo-etiqueta" x="210" y="314">Bs. As.</text>
+          </g>
+          <g class="nodo-g ng1" style="transform-origin:265px 195px">
+            <circle class="pulso p1" cx="265" cy="195" r="5"/>
+            <circle class="nodo-anillo" cx="265" cy="195" r="9"/>
+            <circle class="nodo-centro" cx="265" cy="195" r="4"/>
+            <text class="nodo-etiqueta" x="265" y="214">Córdoba</text>
+          </g>
+          <g class="nodo-g ng2" style="transform-origin:130px 200px">
+            <circle class="pulso p2" cx="130" cy="200" r="5"/>
+            <circle class="nodo-anillo" cx="130" cy="200" r="9"/>
+            <circle class="nodo-centro" cx="130" cy="200" r="4"/>
+            <text class="nodo-etiqueta" x="130" y="219">Mendoza</text>
+          </g>
+          <g class="nodo-g ng6" style="transform-origin:225px 232px">
+            <circle class="pulso p6" cx="225" cy="232" r="5"/>
+            <circle class="nodo-anillo" cx="225" cy="232" r="8"/>
+            <circle class="nodo-centro" cx="225" cy="232" r="3.5"/>
+            <text class="nodo-etiqueta" x="245" y="236">Rosario</text>
+          </g>
+          <g class="nodo-g ng7" style="transform-origin:310px 340px">
+            <circle class="pulso p7" cx="310" cy="340" r="5"/>
+            <circle class="nodo-anillo" cx="310" cy="340" r="8"/>
+            <circle class="nodo-centro" cx="310" cy="340" r="3.5"/>
+            <text class="nodo-etiqueta" x="310" y="360">Mar del Plata</text>
+          </g>
+          <g class="nodo-g ng3" style="transform-origin:310px 115px">
+            <circle class="pulso p3" cx="310" cy="115" r="5"/>
+            <circle cx="310" cy="115" r="10" fill="none" stroke="rgba(232,73,49,0.4)" stroke-width="1"/>
+            <circle cx="310" cy="115" r="5" fill="rgba(232,73,49,0.6)"/>
+            <text class="nodo-etiqueta nodo-etiqueta-noa" x="310" y="136">Tucumán</text>
+          </g>
+          <g class="nodo-g ng4" style="transform-origin:370px 155px">
+            <circle class="pulso p4" cx="370" cy="155" r="5"/>
+            <circle cx="370" cy="155" r="10" fill="none" stroke="rgba(232,73,49,0.4)" stroke-width="1"/>
+            <circle cx="370" cy="155" r="5" fill="rgba(232,73,49,0.6)"/>
+            <text class="nodo-etiqueta nodo-etiqueta-noa" x="400" y="159">Stgo. del Estero</text>
+          </g>
+          <g class="nodo-g ng5" style="transform-origin:390px 70px">
+            <circle class="pulso p5" cx="390" cy="70" r="5"/>
+            <circle cx="390" cy="70" r="10" fill="none" stroke="rgba(232,73,49,0.4)" stroke-width="1"/>
+            <circle cx="390" cy="70" r="5" fill="rgba(232,73,49,0.7)"/>
+            <text class="nodo-etiqueta nodo-etiqueta-noa" x="390" y="91">Salta</text>
+          </g>
+          <g class="nodo-g ng5" style="transform-origin:330px 58px">
+            <circle class="pulso p5" cx="330" cy="58" r="5"/>
+            <circle cx="330" cy="58" r="9" fill="none" stroke="rgba(232,73,49,0.4)" stroke-width="1"/>
+            <circle cx="330" cy="58" r="4.5" fill="rgba(232,73,49,0.65)"/>
+            <text class="nodo-etiqueta nodo-etiqueta-noa" x="308" y="48">Jujuy</text>
+          </g>
+
+          <circle r="3" fill="rgba(255,255,255,0.9)">
+            <animateMotion dur="3.5s" begin="3.5s" repeatCount="indefinite"><mpath href="#ruta-noa-salta"/></animateMotion>
+          </circle>
+          <circle r="2.5" fill="rgba(255,255,255,0.9)">
+            <animateMotion dur="3s" begin="4.2s" repeatCount="indefinite"><mpath href="#ruta-cba"/></animateMotion>
+          </circle>
+          <circle r="2.5" fill="rgba(255,255,255,0.9)">
+            <animateMotion dur="3.8s" begin="5.0s" repeatCount="indefinite"><mpath href="#ruta-mza"/></animateMotion>
+          </circle>
+
+          <g class="leyenda-g">
+            <circle cx="60" cy="395" r="4" fill="rgba(232,73,49,0.7)"/>
+            <text class="nodo-etiqueta nodo-etiqueta-noa" x="70" y="399" text-anchor="start">Alta frecuencia NOA</text>
+            <circle cx="210" cy="395" r="4" fill="rgba(255,255,255,0.2)"/>
+            <text class="nodo-etiqueta" x="220" y="399" text-anchor="start">Cobertura nacional</text>
+          </g>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divisor"></div>
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <a href="index.html" class="footer-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas" style="filter: brightness(0) invert(1); opacity: .8;"/>
+      </a>
+
+      <ul class="footer-enlaces">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cobertura.html">Cobertura</a></li>
+        <li><a href="sectores.html">Sectores</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <p class="footer-copy">© 2026 Extracargas SRL · Gran Buenos Aires, Argentina</p>
+
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

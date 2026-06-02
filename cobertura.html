@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Extracargas — Cobertura nacional. Transporte de carga general a todas las provincias argentinas con alta frecuencia en el NOA."/>
+  <title>Cobertura — Extracargas</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/isologo.svg"/>
+  <link rel="icon" type="image/png" href="img/isologo.png"/>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="nav-barra">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas"/>
+      </a>
+
+      <!-- Links desktop (ocultos por CSS) -->
+      <ul class="nav-enlaces">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cobertura.html" class="activo">Cobertura</a></li>
+        <li><a href="sectores.html">Sectores</a></li>
+        <li><a href="contacto.html" class="nav-cta">Cotizar</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa + desplegable desktop -->
+      <div class="nav-derecha">
+        <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu-desktop" id="menuDesktop">
+          <a href="nosotros.html">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="cobertura.html">Cobertura</a>
+          <a href="sectores.html">Sectores</a>
+          <a href="contacto.html" class="nav-cta">Cotizar</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Menú mobile desplegable -->
+    <div class="nav-menu-mobile" id="menuMobile">
+      <a href="nosotros.html"  onclick="cerrarMenu()">Nosotros</a>
+      <a href="servicios.html" onclick="cerrarMenu()">Servicios</a>
+      <a href="cobertura.html" onclick="cerrarMenu()">Cobertura</a>
+      <a href="sectores.html"  onclick="cerrarMenu()">Sectores</a>
+      <a href="contacto.html"  onclick="cerrarMenu()">Cotizar</a>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════
+       COBERTURA
+  ══════════════════════════════════════ -->
+  <section id="cobertura" class="seccion">
+    <div class="seccion-inner">
+
+      <div class="seccion-label fade-up">Dónde llegamos</div>
+      <h2 class="seccion-titulo fade-up">Cobertura nacional</h2>
+
+      <div class="cobertura-grilla">
+
+        <div class="cobertura-info fade-up">
+          <p>
+            Operamos desde el <strong>Gran Buenos Aires</strong> con salidas programadas hacia todo el territorio argentino. Cubrimos rutas troncales y destinos secundarios con el mismo nivel de trazabilidad y compromiso.
+          </p>
+          <div class="cobertura-noa-badge">
+            <span>★ Alta frecuencia: Salta · Jujuy · Tucumán · Stgo. del Estero</span>
+          </div>
+          <p>
+            Las provincias del NOA cuentan con salidas semanales y tiempos de entrega acordados, lo que nos permite integrarnos de manera confiable a la cadena de abastecimiento de nuestros clientes del norte.
+          </p>
+          <a href="contacto.html" class="btn-ghost-azul">Consultar su destino</a>
+        </div>
+
+        <div class="provincia-lista fade-up">
+          <!-- Alta frecuencia: NOA -->
+          <div class="provincia-subtitulo">Alta frecuencia</div>
+          <span class="provincia-tag noa">Salta ★</span>
+          <span class="provincia-tag noa">Jujuy ★</span>
+          <span class="provincia-tag noa">Tucumán ★</span>
+          <span class="provincia-tag noa">Stgo. del Estero ★</span>
+          <!-- Resto del país -->
+          <div class="provincia-subtitulo">Resto del país</div>
+          <span class="provincia-tag">Buenos Aires</span>
+          <span class="provincia-tag">Córdoba</span>
+          <span class="provincia-tag">Santa Fe</span>
+          <span class="provincia-tag">Mendoza</span>
+          <span class="provincia-tag">Entre Ríos</span>
+          <span class="provincia-tag">Misiones</span>
+          <span class="provincia-tag">Chaco</span>
+          <span class="provincia-tag">Corrientes</span>
+          <span class="provincia-tag">San Juan</span>
+          <span class="provincia-tag">Río Negro</span>
+          <span class="provincia-tag">Neuquén</span>
+          <span class="provincia-tag">Formosa</span>
+          <span class="provincia-tag">Chubut</span>
+          <span class="provincia-tag">San Luis</span>
+          <span class="provincia-tag">La Rioja</span>
+          <span class="provincia-tag">Catamarca</span>
+          <span class="provincia-tag">La Pampa</span>
+          <span class="provincia-tag">Santa Cruz</span>
+          <span class="provincia-tag">Tierra del Fuego</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <a href="index.html" class="footer-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas" style="filter: brightness(0) invert(1); opacity: .8;"/>
+      </a>
+
+      <ul class="footer-enlaces">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cobertura.html">Cobertura</a></li>
+        <li><a href="sectores.html">Sectores</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <p class="footer-copy">© 2026 Extracargas SRL · Gran Buenos Aires, Argentina</p>
+
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

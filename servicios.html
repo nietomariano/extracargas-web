@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Extracargas — Servicios de transporte de carga general. Semirremolques, siders, seguimiento GPS y gestión documental."/>
+  <title>Servicios — Extracargas</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="img/isologo.svg"/>
+  <link rel="icon" type="image/png" href="img/isologo.png"/>
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════ -->
+  <nav class="nav-barra">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas"/>
+      </a>
+
+      <!-- Links desktop (ocultos por CSS) -->
+      <ul class="nav-enlaces">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html" class="activo">Servicios</a></li>
+        <li><a href="cobertura.html">Cobertura</a></li>
+        <li><a href="sectores.html">Sectores</a></li>
+        <li><a href="contacto.html" class="nav-cta">Cotizar</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa + desplegable desktop -->
+      <div class="nav-derecha">
+        <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu-desktop" id="menuDesktop">
+          <a href="nosotros.html">Nosotros</a>
+          <a href="servicios.html">Servicios</a>
+          <a href="cobertura.html">Cobertura</a>
+          <a href="sectores.html">Sectores</a>
+          <a href="contacto.html" class="nav-cta">Cotizar</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Menú mobile desplegable -->
+    <div class="nav-menu-mobile" id="menuMobile">
+      <a href="nosotros.html"  onclick="cerrarMenu()">Nosotros</a>
+      <a href="servicios.html" onclick="cerrarMenu()">Servicios</a>
+      <a href="cobertura.html" onclick="cerrarMenu()">Cobertura</a>
+      <a href="sectores.html"  onclick="cerrarMenu()">Sectores</a>
+      <a href="contacto.html"  onclick="cerrarMenu()">Cotizar</a>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════
+       SERVICIOS
+  ══════════════════════════════════════ -->
+  <section id="servicios" class="seccion seccion-fondo-gris">
+    <div class="seccion-inner">
+
+      <div class="seccion-label fade-up">Lo que hacemos</div>
+      <h2 class="seccion-titulo fade-up">Nuestros servicios</h2>
+
+      <div class="servicios-grilla">
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">🚛</span>
+          <h3>Semirremolques</h3>
+          <p>Alta capacidad para despachos completos de carga general a cualquier destino del país.</p>
+        </div>
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">📦</span>
+          <h3>Siders</h3>
+          <p>Lonas laterales corredizas para carga y descarga ágil de mercadería paletizada.</p>
+        </div>
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">🗺️</span>
+          <h3>Distribución nacional</h3>
+          <p>Rutas planificadas hacia todas las provincias con frecuencias regulares de salida.</p>
+        </div>
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">📡</span>
+          <h3>Seguimiento GPS</h3>
+          <p>Monitoreo en tiempo real disponible para el cliente durante todo el trayecto.</p>
+        </div>
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">📋</span>
+          <h3>Gestión documental</h3>
+          <p>Remitos, cartas de porte, seguros y toda la documentación reglamentaria completa.</p>
+        </div>
+        <div class="tarjeta-servicio fade-up">
+          <span class="tarjeta-icono">🤝</span>
+          <h3>Atención personalizada</h3>
+          <p>Un ejecutivo de cuenta para cada cliente, disponible ante cualquier imprevisto.</p>
+        </div>
+      </div>
+
+      <!-- ── Galería ── -->
+      <div class="galeria fade-up">
+
+        <div class="galeria-label">Nuestra flota</div>
+        <h3 class="galeria-titulo">Galería</h3>
+
+        <div class="carrusel" id="carrusel">
+          <div class="carrusel-pista" id="carruselPista">
+
+            <div class="carrusel-slide">
+              <img src="img/galeria-01.jpg" alt="Semirremolque Extracargas"/>
+              <div class="carrusel-caption">Semirremolques de alta capacidad</div>
+            </div>
+
+            <div class="carrusel-slide">
+              <img src="img/galeria-02.jpg" alt="Sider Extracargas"/>
+              <div class="carrusel-caption">Siders con lonas laterales corredizas</div>
+            </div>
+
+            <div class="carrusel-slide">
+              <img src="img/galeria-03.jpg" alt="Carga paletizada"/>
+              <div class="carrusel-caption">Carga paletizada lista para despacho</div>
+            </div>
+
+            <div class="carrusel-slide">
+              <img src="img/galeria-04.jpg" alt="Operaciones en ruta"/>
+              <div class="carrusel-caption">Operaciones en ruta hacia el NOA</div>
+            </div>
+
+            <div class="carrusel-slide">
+              <img src="img/galeria-05.jpg" alt="Flota Extracargas"/>
+              <div class="carrusel-caption">Flota propia bajo estrictos estándares operativos</div>
+            </div>
+
+          </div>
+
+          <button class="carrusel-btn prev" id="carruselPrev" aria-label="Anterior">&#8592;</button>
+          <button class="carrusel-btn next" id="carruselNext" aria-label="Siguiente">&#8594;</button>
+        </div>
+
+        <div class="carrusel-puntos" id="carruselPuntos"></div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+
+      <a href="index.html" class="footer-logo">
+        <img src="img/logo_horizontal.svg" alt="Extracargas" style="filter: brightness(0) invert(1); opacity: .8;"/>
+      </a>
+
+      <ul class="footer-enlaces">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cobertura.html">Cobertura</a></li>
+        <li><a href="sectores.html">Sectores</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <p class="footer-copy">© 2026 Extracargas SRL · Gran Buenos Aires, Argentina</p>
+
+    </div>
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
