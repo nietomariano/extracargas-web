@@ -16,6 +16,17 @@
   --color-texto-suave: #5a6272;
 }
 
+/* ── Sticky footer ── */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.seccion {
+  flex: 1;
+}
+
 /* ── Reset ── */
 *, *::before, *::after {
   box-sizing: border-box;
