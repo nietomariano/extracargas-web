@@ -187,66 +187,69 @@
             <circle class="pulso p1" cx="265" cy="195" r="5"/>
             <circle class="nodo-anillo" cx="265" cy="195" r="9"/>
             <circle class="nodo-centro" cx="265" cy="195" r="4"/>
-            <text class="nodo-etiqueta" x="265" y="214">Córdoba</text>
+            <text class="nodo-etiqueta" x="280" y="214" text-anchor="start">Córdoba</text>
           </g>
           <g class="nodo-g ng2" style="transform-origin:130px 200px">
             <circle class="pulso p2" cx="130" cy="200" r="5"/>
             <circle class="nodo-anillo" cx="130" cy="200" r="9"/>
             <circle class="nodo-centro" cx="130" cy="200" r="4"/>
-            <text class="nodo-etiqueta" x="130" y="219">Mendoza</text>
+            <text class="nodo-etiqueta" x="144" y="219" text-anchor="start">Mendoza</text>
           </g>
           <g class="nodo-g ng6" style="transform-origin:225px 232px">
             <circle class="pulso p6" cx="225" cy="232" r="5"/>
             <circle class="nodo-anillo" cx="225" cy="232" r="8"/>
             <circle class="nodo-centro" cx="225" cy="232" r="3.5"/>
-            <text class="nodo-etiqueta" x="245" y="236">Rosario</text>
+            <text class="nodo-etiqueta" x="240" y="254" text-anchor="start">Rosario</text>
           </g>
           <g class="nodo-g ng7" style="transform-origin:310px 340px">
             <circle class="pulso p7" cx="310" cy="340" r="5"/>
             <circle class="nodo-anillo" cx="310" cy="340" r="8"/>
             <circle class="nodo-centro" cx="310" cy="340" r="3.5"/>
-            <text class="nodo-etiqueta" x="310" y="360">Mar del Plata</text>
+            <text class="nodo-etiqueta" x="324" y="360" text-anchor="start">Mar del Plata</text>
           </g>
           <g class="nodo-g ng3" style="transform-origin:310px 115px">
             <circle class="pulso p3" cx="310" cy="115" r="5"/>
             <circle cx="310" cy="115" r="10" fill="none" stroke="rgba(232,73,49,0.4)" stroke-width="1"/>
             <circle cx="310" cy="115" r="5" fill="rgba(232,73,49,0.6)"/>
-            <text class="nodo-etiqueta nodo-etiqueta-noa" x="310" y="136">Tucumán</text>
+            <text class="nodo-etiqueta nodo-etiqueta-noa" x="324" y="136" text-anchor="start">Tucumán</text>
           </g>
           <g class="nodo-g ng4" style="transform-origin:370px 155px">
             <circle class="pulso p4" cx="370" cy="155" r="5"/>
             <circle cx="370" cy="155" r="10" fill="none" stroke="rgba(232,73,49,0.4)" stroke-width="1"/>
             <circle cx="370" cy="155" r="5" fill="rgba(232,73,49,0.6)"/>
-            <text class="nodo-etiqueta nodo-etiqueta-noa" x="400" y="159">Stgo. del Estero</text>
+            <text class="nodo-etiqueta nodo-etiqueta-noa" x="384" y="178" text-anchor="start">Stgo. del Estero</text>
           </g>
           <g class="nodo-g ng5" style="transform-origin:390px 70px">
             <circle class="pulso p5" cx="390" cy="70" r="5"/>
             <circle cx="390" cy="70" r="10" fill="none" stroke="rgba(232,73,49,0.4)" stroke-width="1"/>
             <circle cx="390" cy="70" r="5" fill="rgba(232,73,49,0.7)"/>
-            <text class="nodo-etiqueta nodo-etiqueta-noa" x="390" y="91">Salta</text>
+            <text class="nodo-etiqueta nodo-etiqueta-noa" x="404" y="91" text-anchor="start">Salta</text>
           </g>
           <g class="nodo-g ng5" style="transform-origin:330px 58px">
             <circle class="pulso p5" cx="330" cy="58" r="5"/>
             <circle cx="330" cy="58" r="9" fill="none" stroke="rgba(232,73,49,0.4)" stroke-width="1"/>
             <circle cx="330" cy="58" r="4.5" fill="rgba(232,73,49,0.65)"/>
-            <text class="nodo-etiqueta nodo-etiqueta-noa" x="308" y="48">Jujuy</text>
+            <text class="nodo-etiqueta nodo-etiqueta-noa" x="344" y="48" text-anchor="start">Jujuy</text>
           </g>
 
-          <circle r="3" fill="rgba(255,255,255,0.9)">
+          <circle r="3" fill="rgba(255,255,255,0.9)" opacity="0">
+            <animate attributeName="opacity" from="0" to="1" begin="3.5s" dur="0.01s" fill="freeze"/>
             <animateMotion dur="3.5s" begin="3.5s" repeatCount="indefinite"><mpath href="#ruta-noa-salta"/></animateMotion>
           </circle>
-          <circle r="2.5" fill="rgba(255,255,255,0.9)">
+          <circle r="2.5" fill="rgba(255,255,255,0.9)" opacity="0">
+            <animate attributeName="opacity" from="0" to="1" begin="4.2s" dur="0.01s" fill="freeze"/>
             <animateMotion dur="3s" begin="4.2s" repeatCount="indefinite"><mpath href="#ruta-cba"/></animateMotion>
           </circle>
-          <circle r="2.5" fill="rgba(255,255,255,0.9)">
+          <circle r="2.5" fill="rgba(255,255,255,0.9)" opacity="0">
+            <animate attributeName="opacity" from="0" to="1" begin="5.0s" dur="0.01s" fill="freeze"/>
             <animateMotion dur="3.8s" begin="5.0s" repeatCount="indefinite"><mpath href="#ruta-mza"/></animateMotion>
           </circle>
 
-          <g class="leyenda-g">
-            <circle cx="60" cy="395" r="4" fill="rgba(232,73,49,0.7)"/>
-            <text class="nodo-etiqueta nodo-etiqueta-noa" x="70" y="399" text-anchor="start">Alta frecuencia NOA</text>
-            <circle cx="210" cy="395" r="4" fill="rgba(255,255,255,0.2)"/>
-            <text class="nodo-etiqueta" x="220" y="399" text-anchor="start">Cobertura nacional</text>
+          <g class="leyenda-g" style="transform-origin:210px 403px">
+            <circle cx="130" cy="396" r="4" fill="rgba(232,73,49,0.7)"/>
+            <text class="nodo-etiqueta nodo-etiqueta-noa" x="130" y="410" text-anchor="middle">Alta frecuencia NOA</text>
+            <circle cx="290" cy="396" r="4" fill="rgba(255,255,255,0.2)"/>
+            <text class="nodo-etiqueta" x="290" y="410" text-anchor="middle">Cobertura nacional</text>
           </g>
         </svg>
       </div>
