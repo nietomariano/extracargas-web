@@ -552,7 +552,8 @@ body {
   transform: translateY(-3px);
 }
 
-.tarjeta-icono {
+.tarjeta-icono,
+.service-icon {
   color: var(--color-azul);
   line-height: 0;
   margin-bottom: 14px;
@@ -566,13 +567,15 @@ body {
   background: rgba(5, 62, 96, .06);
 }
 
-.tarjeta-icono svg {
+.tarjeta-icono svg,
+.service-icon svg {
   width: 40px;
   height: 40px;
   display: block;
 }
 
-.tarjeta-servicio:hover .tarjeta-icono {
+.tarjeta-servicio:hover .tarjeta-icono,
+.tarjeta-servicio:hover .service-icon {
   color: var(--color-rojo);
   background: rgba(232, 73, 49, .08);
 }
