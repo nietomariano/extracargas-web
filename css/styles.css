@@ -9,6 +9,9 @@
   --color-rojo-hover:  #c22415;
   --color-azul:        #053e60;
   --color-azul-hover:  #0a5a8a;
+  --color-cta-azul:    #003A5D;
+  --color-cta-rojo:    #E84830;
+  --color-cta-rojo-hover: #c63b24;
   --color-blanco:      #ffffff;
   --color-fondo:       #f5f6f8;
   --color-borde:       #dde1e8;
@@ -548,9 +551,22 @@ body {
 }
 
 .tarjeta-icono {
-  font-size: 1.8rem;
+  color: var(--color-azul);
+  line-height: 0;
   margin-bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta-icono svg {
+  width: 40px;
+  height: 40px;
   display: block;
+}
+
+.tarjeta-servicio:hover .tarjeta-icono {
+  color: var(--color-rojo);
 }
 
 .tarjeta-servicio h3 {
@@ -965,6 +981,43 @@ a.dato-valor:hover { color: var(--color-rojo); }
   font-size: .9rem;
   text-align: center;
   line-height: 1.6;
+}
+
+/* ============================================================
+   CTA BAND
+   ============================================================ */
+.cta-band {
+  background: var(--color-cta-azul);
+  padding: 64px 32px;
+}
+
+.cta-band-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cta-band h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.1;
+  color: var(--color-blanco);
+  letter-spacing: .3px;
+}
+
+.cta-band .btn-rojo {
+  background: var(--color-cta-rojo);
+  border-color: var(--color-cta-rojo);
+}
+
+.cta-band .btn-rojo:hover {
+  background: var(--color-cta-rojo-hover);
+  border-color: var(--color-cta-rojo-hover);
 }
 
 /* ============================================================
