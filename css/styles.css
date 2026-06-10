@@ -843,7 +843,29 @@ body {
   transform: translateY(-3px);
 }
 
-.sector-icono { font-size: 1.8rem; line-height: 1; }
+.sector-icono {
+  color: var(--color-azul);
+  line-height: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  border-radius: 14px;
+  background: rgba(5, 62, 96, .06);
+}
+
+.sector-icono svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.tarjeta-sector:hover .sector-icono {
+  color: var(--color-rojo);
+  background: rgba(232, 73, 49, .08);
+}
 
 .tarjeta-sector span {
   font-family: 'Barlow Condensed', sans-serif;
