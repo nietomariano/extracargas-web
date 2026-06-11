@@ -733,76 +733,60 @@ body {
 
 .cobertura-info p strong { color: var(--color-texto); }
 
-/* Badge NOA */
-.cobertura-noa-badge {
-  display: inline-flex;
+/* Grilla de regiones */
+.region-grilla {
+  flex: 1 1 520px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  align-content: start;
+}
+
+.region-card {
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-top: 2px solid var(--color-azul);
+  border-radius: 0 0 6px 6px;
+  padding: 14px 16px;
+}
+
+.region-card.noa {
+  border-top-color: var(--color-rojo);
+  background: rgba(232, 73, 49, .04);
+}
+
+.region-card-titulo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-azul);
+  display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(232, 73, 49, .07);
-  border: 1px solid rgba(232, 73, 49, .25);
-  padding: 9px 14px;
-  margin-bottom: 16px;
-}
-
-.cobertura-noa-badge span {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: .78rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--color-rojo);
-}
-
-/* Lista de provincias */
-.provincia-lista {
-  flex: 1 1 300px;
-  display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  margin-bottom: 7px;
 }
 
-.provincia-subtitulo {
-  width: 100%;
+.region-card.noa .region-card-titulo { color: var(--color-rojo); }
+
+.region-badge {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: .65rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #aaa;
-  margin-top: 8px;
-  margin-bottom: 2px;
-}
-
-.provincia-tag {
-  background: var(--color-fondo);
-  border: 1px solid var(--color-borde);
-  padding: 5px 12px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 600;
-  font-size: .78rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--color-texto-suave);
-  transition: background .2s, color .2s, border-color .2s;
-}
-
-.provincia-tag:hover {
-  background: var(--color-azul);
-  border-color: var(--color-azul);
-  color: var(--color-blanco);
-}
-
-/* NOA destacadas */
-.provincia-tag.noa {
-  background: rgba(232, 73, 49, .06);
-  border-color: rgba(232, 73, 49, .28);
-  color: var(--color-rojo);
   font-weight: 700;
+  font-size: .62rem;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--color-rojo);
+  background: rgba(232, 73, 49, .1);
+  padding: 2px 8px;
+  border-radius: 999px;
 }
 
-.provincia-tag.noa:hover {
-  background: var(--color-rojo);
-  border-color: var(--color-rojo);
-  color: var(--color-blanco);
+.region-card-provincias {
+  font-size: .85rem;
+  color: var(--color-texto-suave);
+  line-height: 1.65;
 }
 
 /* ============================================================
@@ -1145,6 +1129,8 @@ footer {
   .nosotros-grilla,
   .cobertura-grilla,
   .contacto-grilla { gap: 40px; }
+
+  .region-grilla { grid-template-columns: 1fr; }
 
   .footer-inner { flex-direction: column; text-align: center; }
   .footer-enlaces { justify-content: center; }
