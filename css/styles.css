@@ -248,15 +248,6 @@ body {
   pointer-events: none;
 }
 
-/* Acento rojo en esquina */
-.hero::after {
-  content: '';
-  position: absolute;
-  top: -40px; right: -40px;
-  width: 320px; height: 320px;
-  background: radial-gradient(circle, rgba(232, 73, 49, .2) 0%, transparent 70%);
-  pointer-events: none;
-}
 
 .hero-inner {
   max-width: 1200px;
